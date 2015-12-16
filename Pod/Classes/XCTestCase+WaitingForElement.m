@@ -1,12 +1,12 @@
 //
-//  XCTestCase+Additions.m
+//  XCTestCase+WaitingForElement.m
 //  Pods
 //
 //  Created by Dominique Stranz on 15/12/15.
 //
 //
 
-#import "XCTestCase+Additions.h"
+#import "XCTestCase+WaitingForElement.h"
 
 @implementation XCTestCase (Additions)
 

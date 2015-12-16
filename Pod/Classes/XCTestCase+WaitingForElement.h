@@ -1,5 +1,5 @@
 //
-//  XCTestCase+Additions.h
+//  XCTestCase+WaitingForElement.h
 //  Pods
 //
 //  Created by Dominique Stranz on 15/12/15.

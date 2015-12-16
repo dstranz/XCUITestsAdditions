@@ -1,0 +1,25 @@
+{
+  "name": "XCUITestsAdditions",
+  "version": "0.1.0",
+  "summary": "A short description of XCUITestsAdditions.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/XCUITestsAdditions",
+  "license": "MIT",
+  "authors": {
+    "Dominique Stranz": "dstranz@olx.pl"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/XCUITestsAdditions.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "XCUITestsAdditions": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

@@ -8,23 +8,17 @@
 
 Pod::Spec.new do |s|
   s.name             = "XCUITestsAdditions"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of XCUITestsAdditions."
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
+  s.version          = "1.0"
+  s.summary          = "Convenient methods used for waiting for UI elements"
   s.description      = <<-DESC
+    XCUITestsAdditions provides simple methods that may help you in everyday work with XCode UI Tests.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/XCUITestsAdditions"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/dstranz/XCUITestsAdditions"
   s.license          = 'MIT'
-  s.author           = { "Dominique Stranz" => "dstranz@olx.pl" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/XCUITestsAdditions.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Dominique Stranz" => "web@dstranz.me" }
+  s.source           = { :git => "https://github.com/dstranz/XCUITestsAdditions.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/dstranz'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
@@ -34,7 +28,5 @@ Pod::Spec.new do |s|
     'XCUITestsAdditions' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'XCTest'
 end

@@ -1,0 +1,6 @@
+framework module XCUITestsAdditions {
+  umbrella header "XCUITestsAdditions-umbrella.h"
+
+  export *
+  module * { export * }
+}

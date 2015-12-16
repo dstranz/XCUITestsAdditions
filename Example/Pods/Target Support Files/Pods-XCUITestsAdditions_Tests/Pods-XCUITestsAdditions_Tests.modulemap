@@ -1,0 +1,6 @@
+framework module Pods_XCUITestsAdditions_Tests {
+  umbrella header "Pods-XCUITestsAdditions_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

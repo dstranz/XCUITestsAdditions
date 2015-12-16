@@ -1,0 +1,14 @@
+PODS:
+  - XCUITestsAdditions (0.1.0)
+
+DEPENDENCIES:
+  - XCUITestsAdditions (from `../`)
+
+EXTERNAL SOURCES:
+  XCUITestsAdditions:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XCUITestsAdditions: 632d2afca02f19f1c81c557c9b167b9ea0cae7f1
+
+COCOAPODS: 0.39.0

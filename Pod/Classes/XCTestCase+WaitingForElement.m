@@ -8,30 +8,35 @@
 
 #import "XCTestCase+WaitingForElement.h"
 
+static NSString *const existsProperty = @"exists";
+static NSString *const hittableProperty = @"hittable";
+
+
 @implementation XCTestCase (Additions)
 
-- (void)waitForElement:(XCUIElement *)element {
-    [self waitForElement:element withTimeout:15];
+- (XCUIElement *)waitForElement:(XCUIElement *)element {
+    return [self waitForElement:element withTimeout:15];
 }
 
-- (void)waitForElement:(XCUIElement *)element withTimeout:(NSTimeInterval)interval {
-    NSPredicate *exists = [NSPredicate predicateWithFormat:@"exists == 1"];
+- (XCUIElement *)waitForElement:(XCUIElement *)element withTimeout:(NSTimeInterval)interval {
+    return [self waitForElement:element property:existsProperty withTimeout:interval];
+}
+
+- (XCUIElement *)waitForElementHittable:(XCUIElement *)element {
+    return [self waitForElementHittable:element withTimeout:15];
+}
+
+- (XCUIElement *)waitForElementHittable:(XCUIElement *)element withTimeout:(NSTimeInterval)interval {
+    return [self waitForElement:element property:hittableProperty withTimeout:interval];
+}
+
+- (XCUIElement *)waitForElement:(XCUIElement *)element property:(NSString *)property withTimeout:(NSTimeInterval)interval {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == 1", property];
     
-    [self expectationForPredicate:exists evaluatedWithObject:element handler:nil];
+    [self expectationForPredicate:predicate evaluatedWithObject:element handler:nil];
     [self waitForExpectationsWithTimeout:interval handler:nil];
-}
-
-
-- (void)waitForElementHittable:(XCUIElement *)element {
-    [self waitForElementHittable:element withTimeout:15];
-}
-
-- (void)waitForElementHittable:(XCUIElement *)element withTimeout:(NSTimeInterval)interval {
-    NSPredicate *exists = [NSPredicate predicateWithFormat:@"hittable == 1"];
     
-    [self expectationForPredicate:exists evaluatedWithObject:element handler:nil];
-    [self waitForExpectationsWithTimeout:interval handler:nil];
+    return element;
 }
-
 
 @end

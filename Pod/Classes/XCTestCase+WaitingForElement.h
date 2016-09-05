@@ -6,8 +6,8 @@
 //
 //
 
-#import <Foundation/Foundation.h>
-#import <XCTest/XCTest.h>
+@import Foundation;
+@import XCTest;
 
 @interface XCTestCase (Additions)
 

@@ -8,6 +8,10 @@
 
 #import "XCTestCase+WaitingForElement.h"
 
+static NSString *const existsProperty = @"exists";
+static NSString *const hittableProperty = @"hittable";
+
+
 @implementation XCTestCase (Additions)
 
 - (XCUIElement *)waitForElement:(XCUIElement *)element {
@@ -15,7 +19,7 @@
 }
 
 - (XCUIElement *)waitForElement:(XCUIElement *)element withTimeout:(NSTimeInterval)interval {
-    return [self WaitingForElement:element property:@"exists" withTimeout:interval];
+    return [self waitForElement:element property:existsProperty withTimeout:interval];
 }
 
 - (XCUIElement *)waitForElementHittable:(XCUIElement *)element {
@@ -23,7 +27,7 @@
 }
 
 - (XCUIElement *)waitForElementHittable:(XCUIElement *)element withTimeout:(NSTimeInterval)interval {
-    return [self WaitingForElement:element property:@"hittable" withTimeout:interval];
+    return [self waitForElement:element property:hittableProperty withTimeout:interval];
 }
 
 - (XCUIElement *)waitForElement:(XCUIElement *)element property:(NSString *)property withTimeout:(NSTimeInterval)interval {

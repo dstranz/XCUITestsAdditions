@@ -15,24 +15,27 @@
  *  Create expectation with predicate exists == 1 for given element with default timeout 15s
  *
  *  @param element for predicate evaluation
+ *  @returns return element if exists
  */
-- (void)waitForElement:(XCUIElement *)element;
+- (XCUIElement *)waitForElement:(XCUIElement *)element;
 
 /*!
  *  Create expectation with predicate exists == 1 for given element
  *
  *  @param element for predicate evaluation
  *  @param interval expectation waiting timout
+ *  @returns return element if exists
  */
-- (void)waitForElement:(XCUIElement *)element withTimeout:(NSTimeInterval)interval;
+- (XCUIElement *)waitForElement:(XCUIElement *)element withTimeout:(NSTimeInterval)interval;
 
 /*!
  *  Create expectation with predicate hittable == 1 for given element with default timeout 15s
  *  Should be used instead -waitForElement: if we want to interact with element (tap, swipe, etc...)
  *
  *  @param element for predicate evaluation
+ *  @returns return element if hittable
  */
-- (void)waitForElementHittable:(XCUIElement *)element;
+- (XCUIElement *)waitForElementHittable:(XCUIElement *)element;
 
 /*!
  *  Create expectation with predicate hittable == 1 for given element
@@ -40,7 +43,8 @@
  *
  *  @param element for predicate evaluation
  *  @param interval expectation waiting timout
+ *  @returns return element if hittable
  */
-- (void)waitForElementHittable:(XCUIElement *)element withTimeout:(NSTimeInterval)interval;
+- (XCUIElement *)waitForElementHittable:(XCUIElement *)element withTimeout:(NSTimeInterval)interval;
 
 @end

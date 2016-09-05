@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "XCUITestsAdditions"
-  s.version          = "1.0"
+  s.version          = "1.1"
   s.summary          = "Convenient methods used for waiting for UI elements"
   s.description      = <<-DESC
     XCUITestsAdditions provides simple methods that may help you in everyday work with XCode UI Tests.

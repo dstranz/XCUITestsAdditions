@@ -31,6 +31,8 @@ static NSString *const hittableProperty = @"hittable";
 }
 
 - (XCUIElement *)waitForElement:(XCUIElement *)element property:(NSString *)property withTimeout:(NSTimeInterval)interval {
+    //Need this to avoid "Failure getting snapshot error." See https://forums.developer.apple.com/thread/6437
+    sleep(1);
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == 1", property];
     
     [self expectationForPredicate:predicate evaluatedWithObject:element handler:nil];
